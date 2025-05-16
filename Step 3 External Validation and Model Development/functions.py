@@ -116,7 +116,7 @@ def build_model(df, i, complete_set_id):
 
         if complete_set_id == 1:
             NUM_EPOCHS = 40
-            MODEL_SAVE_PATH = os.getcwd() + f"/Classification Models/Complete Set 1 Models/ROBOMechDB Complete Set 1 Model Seed {i}.keras"
+            MODEL_SAVE_PATH = os.getcwd() + f"/Classification Models/Models Trained on randomNegatives/ROBOMechDB randomNegatives Model Seed {i}.keras"
             model = tf.keras.models.Sequential([
                 tf.keras.Input(shape=(600,)),
                 tf.keras.layers.Dense(1024, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.001)),
@@ -129,7 +129,7 @@ def build_model(df, i, complete_set_id):
             ])
         else:
             NUM_EPOCHS = 100
-            MODEL_SAVE_PATH = os.getcwd() + f"/Classification Models/Complete Set 2 Models/ROBOMechDB Complete Set 2 Model Seed {i}.keras"
+            MODEL_SAVE_PATH = os.getcwd() + f"/Classification Models/Models Trained on restrictedNegatives/ROBOMechDB restrictedNegatives Model Seed {i}.keras"
 
             model = tf.keras.models.Sequential([
                 tf.keras.Input(shape=(600,)),
